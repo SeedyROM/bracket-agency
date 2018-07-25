@@ -30,7 +30,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  flex-grow: 2;
 
   #counter {
     display: flex;
