@@ -9,7 +9,7 @@
       <div class="navbar-brand">
         <router-link
           class="navbar-item"
-          @click.native="navbarVisible = !navbarVisible"          
+          @click.native="navbarVisible = false"          
           to="/">
           <span class="logo">
             Bracket Agency
@@ -30,10 +30,12 @@
       <slide-y-up-transition>
         <div
           :class="{ 'is-active': navbarVisible }"
-          @click="navbarVisible = !navbarVisible"
           v-if="navbarVisible"
           class="navbar-menu">
-          <div class="navbar-end">
+          <div
+            class="navbar-end"
+            @click="navbarVisible = !navbarVisible"
+          >
             <div class="navbar-item">
               <router-link to="/what">Who Are We</router-link>
             </div>
@@ -80,7 +82,7 @@ export default {
     @include fluid-type($min-screen-width, $max-screen-width, 30px, 50px);
     font-family: $brand-logo-font;
     display: inline-block;
-    margin-bottom: -0.13em;
+    margin-bottom: -0.132em;
   }
 
   .navbar-item {
