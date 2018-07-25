@@ -33,9 +33,7 @@
           v-if="navbarVisible"
           :class="{ 'is-active': navbarVisible }"
           class="navbar-menu">
-          <div
-            class="navbar-end"
-          >
+          <div class="navbar-end">
             <div class="navbar-item">
               <router-link
                 to="/what"
