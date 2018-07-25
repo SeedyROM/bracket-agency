@@ -4,7 +4,8 @@
       v-if="showing"
       class="navbar is-black"
       role="navigation"
-      aria-label="main navigation">
+      aria-label="main navigation"
+      >
       <div class="navbar-brand">
         <router-link
           class="navbar-item"
@@ -13,31 +14,34 @@
             Bracket Agency
           </span>
         </router-link>
-
         <a
-          :class="{ 'is-active': showNav }"
+          :class="{ 'is-active': navbarVisible }"
           role="button"
           class="navbar-burger"
           aria-label="menu"
           aria-expanded="false"
-          @click="showNav = !showNav">
+          @click="navbarVisible = !navbarVisible">
           <span aria-hidden="true"/>
           <span aria-hidden="true"/>
           <span aria-hidden="true"/>
         </a>
       </div>
-      <div
-        :class="{ 'is-active': showNav }"
-        class="navbar-menu">
-        <div class="navbar-end">
-          <div class="navbar-item">
-            <router-link to="/what">Who Are We</router-link>
-          </div>
-          <div class="navbar-item">
-            <router-link to="/contact">Contact</router-link>
+      <slide-y-up-transition>
+        <div
+          :class="{ 'is-active': navbarVisible }"
+          v-if="navbarVisible"
+          class="navbar-menu">
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <router-link to="/what">Who Are We</router-link>
+            </div>
+            <div class="navbar-item">
+              <router-link to="/contact">Contact</router-link>
+            </div>
           </div>
         </div>
-    </div></nav>
+      </slide-y-up-transition>
+    </nav>
   </slide-y-up-transition>
 </template>
 
@@ -51,7 +55,7 @@ export default {
   data() {
     return {
       showing: false,
-      showNav: false,
+      navbarVisible: false,
     }
   },
   mounted() {
@@ -79,6 +83,16 @@ export default {
 
   .navbar-item {
     margin-right: 1em;
+    
+    &:hover, &:active {
+      background-color: transparent !important;
+    }
+  }
+
+  .navbar-menu.is-active {
+    position: absolute;
+    width: 100%;
+    background: #0a0a0a;
   }
 
   .navbar-menu {
