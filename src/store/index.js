@@ -13,11 +13,17 @@ const mutations = {
   increment(newState) {
     newState.count += 1
   },
+  decrement(newState) {
+    newState.count -= 1
+  },
 }
 
 const actions = {
   increment({ commit }) {
     commit('increment')
+  },
+  decrement({ commit }) {
+    commit('decrement')
   },
 }
 

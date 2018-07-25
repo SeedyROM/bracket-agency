@@ -5,13 +5,14 @@
       class="navbar is-black"
       role="navigation"
       aria-label="main navigation"
-      >
+    >
       <div class="navbar-brand">
         <router-link
           class="navbar-item"
-          @click.native="navbarVisible = false"          
           to="/">
-          <span class="logo">
+          <span
+            class="logo"
+            @click="navbarVisible = false">
             Bracket Agency
           </span>
         </router-link>
@@ -29,18 +30,21 @@
       </div>
       <slide-y-up-transition>
         <div
-          :class="{ 'is-active': navbarVisible }"
           v-if="navbarVisible"
+          :class="{ 'is-active': navbarVisible }"
           class="navbar-menu">
           <div
             class="navbar-end"
-            @click="navbarVisible = !navbarVisible"
           >
             <div class="navbar-item">
-              <router-link to="/what">Who Are We</router-link>
+              <router-link
+                to="/what"
+                @click.native="navbarVisible = false">Who Are We</router-link>
             </div>
             <div class="navbar-item">
-              <router-link to="/contact">Contact</router-link>
+              <router-link
+                to="/contact"
+                @click.native="navbarVisible = false">Contact</router-link>
             </div>
           </div>
         </div>
@@ -87,7 +91,7 @@ export default {
 
   .navbar-item {
     margin-right: 1em;
-    
+
     &:hover, &:active {
       background-color: transparent !important;
     }

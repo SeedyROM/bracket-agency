@@ -124,5 +124,6 @@ export default {
 
   p {
     color: #FFF;
+    @include fluid-type($min-screen-width, $max-screen-width, 14px, 18px);
   }
 </style>

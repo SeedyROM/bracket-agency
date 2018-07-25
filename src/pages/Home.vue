@@ -9,6 +9,12 @@
       >
         Increment me!
       </button>
+      <button
+        class="button is-info is-rounded"
+        @click="$store.dispatch('decrement')"
+      >
+        Decrement me?
+      </button>
     </div>
   </div>
 </template>
@@ -52,6 +58,10 @@ export default {
 
   .title.is-1 {
     color: #fff;
+  }
+
+  button {
+    margin-bottom: 1.5em;
   }
 }
 </style>
