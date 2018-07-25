@@ -9,6 +9,7 @@
       <div class="navbar-brand">
         <router-link
           class="navbar-item"
+          @click.native="navbarVisible = !navbarVisible"          
           to="/">
           <span class="logo">
             Bracket Agency
@@ -29,6 +30,7 @@
       <slide-y-up-transition>
         <div
           :class="{ 'is-active': navbarVisible }"
+          @click="navbarVisible = !navbarVisible"
           v-if="navbarVisible"
           class="navbar-menu">
           <div class="navbar-end">
