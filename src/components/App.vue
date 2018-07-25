@@ -11,6 +11,7 @@
 
 <script>
 import { SlideXRightTransition } from 'vue2-transitions'
+import { pageLoadTime } from '../defaults'
 import Navbar from './Navbar.vue'
 
 export default {
@@ -26,7 +27,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.showing = true
-    }, 400)
+    }, pageLoadTime)
   },
 }
 </script>

@@ -53,6 +53,7 @@
 
 <script>
 import { SlideYUpTransition } from 'vue2-transitions'
+import { pageLoadTime } from '../defaults'
 
 export default {
   components: {
@@ -67,7 +68,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.showing = true
-    }, 200)
+    }, pageLoadTime)
   },
 }
 </script>
