@@ -1,6 +1,20 @@
 @import 'theme';
-@import 'animations';
+@import 'globals';
+@import 'typography';
 
 * {
   box-sizing: border-box;
+}
+
+body {
+  background: $black;
+  min-height: 100vh;
+}
+
+.content {
+  padding: 2em;
+
+  @media only screen and (max-width: $tablet-breakpoint) {
+    padding: 1em;
+  } 
 }
