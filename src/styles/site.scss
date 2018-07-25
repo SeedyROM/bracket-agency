@@ -6,9 +6,18 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   background: $black;
-  min-height: 100vh;
+  min-height: 100%;
+  position: relative;
+}
+
+#page {
+  height: 100%;
 }
 
 .content {

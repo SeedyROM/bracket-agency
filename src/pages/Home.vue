@@ -29,6 +29,8 @@ export default {
   font-size: 15px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100%;
 
   #counter {
     display: flex;
