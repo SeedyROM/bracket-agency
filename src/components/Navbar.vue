@@ -30,7 +30,6 @@
       </div>
       <slide-y-up-transition>
         <div
-          v-if="navbarVisible"
           :class="{ 'is-active': navbarVisible }"
           class="navbar-menu">
           <div class="navbar-end">
@@ -63,12 +62,18 @@ export default {
     return {
       showing: false,
       navbarVisible: false,
+      width: 0,
     }
   },
   mounted() {
     setTimeout(() => {
       this.showing = true
     }, pageLoadTime)
+
+    this.width = window.outerWidth
+    window.addEventListener('resize', () => {
+      this.width = window.outerWidth
+    })
   },
 }
 </script>
