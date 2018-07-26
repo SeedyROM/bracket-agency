@@ -36,12 +36,12 @@
             <div class="navbar-item">
               <router-link
                 to="/what"
-                @click.native="navbarVisible = false">Who Are We</router-link>
+                @click.native="navbarVisible = false">{{ $t('navbar.whoAreWe') }}</router-link>
             </div>
             <div class="navbar-item">
               <router-link
                 to="/contact"
-                @click.native="navbarVisible = false">Contact</router-link>
+                @click.native="navbarVisible = false">{{ $t('navbar.contact') }}</router-link>
             </div>
           </div>
         </div>
