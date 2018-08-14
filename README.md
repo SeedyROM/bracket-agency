@@ -9,3 +9,8 @@ A nifty little boilerplate using Vue, Poi and Bulma.
 
 ## Run The Development Server
 `npm run dev`
+
+## Build A Release
+`npm run build`
+
+**Pretty straightforward!**
